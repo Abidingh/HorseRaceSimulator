@@ -33,54 +33,71 @@ public class Horse
     
     
     //Other methods of class Horse
+	
+
+	//sets the fall flag to true
     public void fall()
     {
-        
+        this.fallFlag = true;
+
     }
     
+
     public double getConfidence()
     {
-        
+        return this.confidence;
     }
     
     public int getDistanceTravelled()
     {
-        
+        return this.distanceTravelled;
     }
     
     public String getName()
     {
-        
+        return this.name;
     }
     
     public char getSymbol()
     {
-        
+        return this.symbol;
     }
     
+	//sets distance travelled to 0 and fall flag to false
     public void goBackToStart()
     {
-        
+        this.distanceTravelled = 0;
+        this.fallFlag = false;
     }
     
+
     public boolean hasFallen()
     {
-        
+        return this.fallFlag;
     }
 
+	//increments distance travelled by 1
     public void moveForward()
     {
-        
+        this.distanceTravelled++;
     }
 
+	//validates if the new confidence is between 0 and 1.
     public void setConfidence(double newConfidence)
     {
-        
+        if(newConfidence>0 && newConfidence<1)
+        {
+            this.confidence = newConfidence;
+        }
+        else
+        {
+			System.out.println("Confidence must be between 0 and 1.");
+        }
     }
     
     public void setSymbol(char newSymbol)
     {
-        
+        this.symbol = newSymbol;
     }
     
 }
