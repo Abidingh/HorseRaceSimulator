@@ -27,7 +27,14 @@ public class Horse
     {
         this.name = horseName;
         this.symbol = horseSymbol;
-        this.confidence = horseConfidence;
+		
+		try{
+			setConfidence(horseConfidence);
+		}
+		catch(IllegalArgumentException e){
+			System.out.println("Error in constructor: " + e.getMessage());
+			this.confidence = 0.5; //sets confidence to a default value of 0.5
+		}
     }
     
     
@@ -91,7 +98,7 @@ public class Horse
         }
         else
         {
-			System.out.println("Confidence must be between 0 and 1.");
+			throw new IllegalArgumentException("Confidence must be between 0 and 1.");
         }
     }
     
