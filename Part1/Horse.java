@@ -22,7 +22,6 @@ public class Horse
     
       
     //Constructor of class Horse
-    /**
     public Horse(char horseSymbol, String horseName, double horseConfidence)
     {
         this.name = horseName;
