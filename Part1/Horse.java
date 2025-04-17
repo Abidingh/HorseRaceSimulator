@@ -97,7 +97,7 @@ public class Horse
         }
         else
         {
-			throw new IllegalArgumentException("Confidence must be between 0 and 1.");
+            throw new IllegalArgumentException("Confidence must be between 0 and 1.");
         }
     }
     
