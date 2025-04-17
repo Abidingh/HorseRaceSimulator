@@ -7,7 +7,7 @@ public class HorseTest
         Horse horse1 = new Horse('A', "Alpha", 0.75);
 
         System.out.println("Test 1: Constructor with valid confidence");
-        System.out.println("Name: " + horse1.getName()); // Expected: Lightning
+        System.out.println("Name: " + horse1.getName()); // Expected: Alpha
         System.out.println("Symbol: " + horse1.getSymbol()); // Expected: A
         System.out.println("Confidence: " + horse1.getConfidence()); // Expected: 0.75
         System.out.println("Distance Travelled: " + horse1.getDistanceTravelled()); // Expected: 0
