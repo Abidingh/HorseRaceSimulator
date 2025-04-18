@@ -34,7 +34,14 @@ public class Race
      */
     public void setRaceLength(int distance)
     {
+        if (distance > 0)
+        {
         this.raceLength = distance;
+        }
+        else
+        {
+            throw new IllegalArgumentException("Race length must be positive");
+        }
     }
 
     /**
