@@ -4,14 +4,14 @@ public class RaceTest {
         Race myRace = new Race(30);
 
         // Create horses
-        Horse horse1 = new Horse('\u265E', "PIPPI LONGSTOCKING", 0.6); // ♞
-        Horse horse2 = new Horse('\u265E', "KOKOMO", 0.6);
-        Horse horse3 = new Horse('\u265E', "EL JEFE", 0.4);
+        Horse horse1 = new Horse('♞', "PIPPI LONGSTOCKING", 0.6); // ♞
+        Horse horse2 = new Horse('♞', "KOKOMO", 0.6);
+        Horse horse3 = new Horse('♞', "EL JEFE", 0.4);
 
         // Add horses to the race
-        myRace.addHorse(horse1, 1);
-        myRace.addHorse(horse2, 2);
-        myRace.addHorse(horse3, 3);
+        myRace.addHorse(horse1);
+        myRace.addHorse(horse2);
+        myRace.addHorse(horse3);
 
         // Start the race
         myRace.startRace();
