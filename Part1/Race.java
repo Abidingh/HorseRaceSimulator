@@ -27,6 +27,8 @@ public class Race
         horses = new ArrayList<>();
     }
 
+
+
     /**
      * Adds a horse to the race in the next available lane
      *
@@ -80,14 +82,23 @@ public class Race
 
         while (!finished)
         {
+
             //move each horse
             for(Horse horse : horses)
             {
                 moveHorse(horse);
             }
 
+
             //print the race positions
             printRace();
+
+            //check if all the horses have fallen
+            if(haveAllFallen())
+            {
+                finished = true;
+                continue;
+            }
 
             //if any of the three horses has won the race is finished
             for(Horse horse : horses)
@@ -103,9 +114,37 @@ public class Race
             try{
                 TimeUnit.MILLISECONDS.sleep(100);
             }catch(Exception e){}
+
         }
 
-        System.out.println("And the winner is... " + winner.getName() + "!");
+        //check if there has been a winner declared
+        if(winner != null)
+        {
+            System.out.println("And the winner is... " + winner.getName() + "!");
+        }
+        else
+        {
+            System.out.println("All horses have fallen! There is no winner.");
+        }
+    }
+
+    /**
+     * Check if all horses have fallen
+     *
+     * @return true if all horses have fallen
+     */
+    private Boolean haveAllFallen()
+    {
+        for(Horse horse : horses)
+        {
+            //if one horse hasn't fallen return false
+            if(!horse.hasFallen())
+            {
+                return false;
+            }
+        }
+        //otherwise, return true
+        return true;
     }
 
     /**
