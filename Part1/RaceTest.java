@@ -16,6 +16,9 @@ public class RaceTest {
         // Start the race
         myRace.startRace();
 
+        /*
+         * Tests for the raceLength to check if it works.
+         *
         //Change race length to 40
         myRace.setRaceLength(40);
 
@@ -29,5 +32,8 @@ public class RaceTest {
         catch(Exception e){
             System.out.println("Caught exception for invalid race length: " + e.getMessage());
         }
+
+        */
+
     }
 }

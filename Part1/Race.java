@@ -272,11 +272,11 @@ public class Race
         System.out.print('|');
 
         //print the horse's name and current confidence at the end of its displayed lane
-        System.out.print("   " + theHorse.getName() + "(Current confidence " + theHorse.getConfidence() + ")");
+        System.out.printf("   " + theHorse.getName() + "(Current confidence %.1f)", theHorse.getConfidence());
     }
 
 
-    /***
+    /**
      * print a character a given number of times.
      * e.g. printmany('x',5) will print: xxxxx
      *
