@@ -46,6 +46,16 @@ public class Horse
     {
         this.fallFlag = true;
 
+        //decrement confidence by 0.1 when horse falls
+        try
+        {
+            setConfidence(this.confidence - 0.1);
+        }
+        catch(IllegalArgumentException e)
+        {
+            // If confidence drops below 0, set to a min value
+            this.confidence = 0.1;
+        }
     }
     
 

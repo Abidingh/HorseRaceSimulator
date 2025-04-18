@@ -84,6 +84,7 @@ public class Race
     {
         //declare a local variable to tell us when the race is finished
         boolean finished = false;
+        //declare a local variable to store the winner of the race
         Horse winner = null;
 
         //return all horses back to start
@@ -128,7 +129,8 @@ public class Race
             //wait for 100 milliseconds
             try{
                 TimeUnit.MILLISECONDS.sleep(100);
-            }catch(Exception e){}
+            }
+            catch(Exception e){}
 
         }
 
@@ -136,6 +138,16 @@ public class Race
         if(winner != null)
         {
             System.out.println("And the winner is... " + winner.getName() + "!");
+            //increment winner's confidence by 0.1 if they win
+            try
+            {
+                winner.setConfidence(winner.getConfidence() + 0.1);
+            }
+            //catch if confidence is already at its highest
+            catch(Exception e)
+            {
+                System.out.println(winner.getName() + "'s is already as confident as he can be!");
+            }
         }
         else
         {
