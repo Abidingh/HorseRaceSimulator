@@ -27,7 +27,15 @@ public class Race
         horses = new ArrayList<>();
     }
 
-
+    /**
+     * Sets the race length outside the constructor
+     *
+     * @param distance the length of the racetrack (in metres/yards...)
+     */
+    public void setRaceLength(int distance)
+    {
+        this.raceLength = distance;
+    }
 
     /**
      * Adds a horse to the race in the next available lane
